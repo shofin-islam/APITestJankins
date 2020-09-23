@@ -1,2 +1,4 @@
 # APITestJankins
-Repository to test API by using Rest Assured Framework CI/CD
+- Repository to test API 
+- Rest Assured Framework 
+- Jenkins CI/CD

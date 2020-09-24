@@ -1,5 +1,7 @@
 package com.fluentWait.test;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import com.fluentWait.bin.EmployeeBin;
 import com.fluentWait.common.EndPoint;
 import com.fluentWait.framework.RestAssuredConfiguration;
@@ -40,23 +42,23 @@ public class Employee {
         response.then().body("firstName", equalTo("Fluent"), "lastName", equalTo("Wait"), "address", equalTo("New York"));
         //Path Validation
         //1.Hard Assertion
-        Assert.assertEquals(response.path("firstName"), "Fluent");
-        Assert.assertEquals(response.path("lastName"), "Wait");
+        AssertJUnit.assertEquals(response.path("firstName"), "Fluent");
+        AssertJUnit.assertEquals(response.path("lastName"), "Wait");
         //2.Soft Assertion
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(response.path("firstName"), "Fluent", "First Name Not Equal");
-        softAssert.assertEquals(response.path("lastName"), "Wait");
-        softAssert.assertEquals(response.path("address"), "New York", "City is not equal");
+        AssertJUnit.assertEquals(response.path("firstName"), "Fluent");
+        AssertJUnit.assertEquals(response.path("lastName"), "Wait");
+        AssertJUnit.assertEquals(response.path("address"), "New York");
         softAssert.assertAll();
         //Java Object
         EmployeeBin employeeBin = response.as(EmployeeBin.class);
         //1.Hard Assertion
-        Assert.assertEquals(employeeBin.getFirstName(),"Fluent");
+        AssertJUnit.assertEquals(employeeBin.getFirstName(),"Fluent");
         //2.Soft Assertion
         SoftAssert newSoftAssert = new SoftAssert();
-        newSoftAssert.assertEquals(employeeBin.getFirstName(), "Fluent", "First Name Not Equal");
-        newSoftAssert.assertEquals(employeeBin.getLastName(), "Wait");
-        newSoftAssert.assertEquals(employeeBin.getAddress(), "New York", "City is not equal");
+        AssertJUnit.assertEquals(employeeBin.getFirstName(), "Fluent", "First Name Not Equal");
+        AssertJUnit.assertEquals(employeeBin.getLastName(), "Wait");
+        AssertJUnit.assertEquals(employeeBin.getAddress(), "New York", "City is not equal");
         newSoftAssert.assertAll();
 
     }

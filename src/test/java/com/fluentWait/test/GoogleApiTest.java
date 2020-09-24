@@ -1,5 +1,7 @@
 package com.fluentWait.test;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import com.fluentWait.bin.Google;
 import com.fluentWait.bin.Item;
 import com.fluentWait.bin.VolumeInfo;
@@ -29,13 +31,13 @@ public class GoogleApiTest {
                 new RestAssuredConfiguration().getResponse(requestSpecification, EndPoint.GOOGLE_API, HttpStatus.SC_OK);
         Google google = response.as(Google.class, ObjectMapperType.GSON);
         SoftAssert softAssert = new SoftAssert();
-        Assert.assertTrue(response.getTimeIn(TimeUnit.SECONDS) <= 10, "Response Time Is Not Within Limit");
+        AssertJUnit.assertTrue(response.getTimeIn(TimeUnit.SECONDS) <= 10);
         List<Item> items = google.getItems();
         for (Item item : items) {
             System.out.println(item.toString());
-            softAssert.assertTrue(!item.getId().equalsIgnoreCase(""), "ID IS BLANK");
+            AssertJUnit.assertTrue(!item.getId().equalsIgnoreCase(""));
             VolumeInfo volumeInfo = item.getVolumeInfo();
-            softAssert.assertTrue(!volumeInfo.getTitle().equalsIgnoreCase(""), "Title is Blank");
+            AssertJUnit.assertTrue(!volumeInfo.getTitle().equalsIgnoreCase(""));
         }
         softAssert.assertAll();
     }

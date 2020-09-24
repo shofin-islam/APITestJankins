@@ -2,22 +2,22 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2173" started-at="2020-09-23T12:41:38Z" finished-at="2020-09-23T12:41:40Z">
+  <suite name="ApiTestingSuite" duration-ms="3015" started-at="2020-09-24T13:26:07Z" finished-at="2020-09-24T13:26:10Z">
     <groups>
       <group name="google">
-        <method signature="GoogleApiTest.googleApiTest()[pri:0, instance:com.fluentWait.test.GoogleApiTest@6279cee3]" name="googleApiTest" class="com.fluentWait.test.GoogleApiTest"/>
+        <method signature="GoogleApiTest.googleApiTest()[pri:0, instance:com.fluentWait.test.GoogleApiTest@1b604f19]" name="googleApiTest" class="com.fluentWait.test.GoogleApiTest"/>
       </group> <!-- google -->
       <group name="demo">
-        <method signature="GoogleApiTest.googleApiTest()[pri:0, instance:com.fluentWait.test.GoogleApiTest@6279cee3]" name="googleApiTest" class="com.fluentWait.test.GoogleApiTest"/>
+        <method signature="GoogleApiTest.googleApiTest()[pri:0, instance:com.fluentWait.test.GoogleApiTest@1b604f19]" name="googleApiTest" class="com.fluentWait.test.GoogleApiTest"/>
       </group> <!-- demo -->
     </groups>
-    <test name="Default test" duration-ms="2173" started-at="2020-09-23T12:41:38Z" finished-at="2020-09-23T12:41:40Z">
+    <test name="ApiTest" duration-ms="3015" started-at="2020-09-24T13:26:07Z" finished-at="2020-09-24T13:26:10Z">
       <class name="com.fluentWait.test.GoogleApiTest">
-        <test-method status="PASS" signature="googleApiTest()[pri:0, instance:com.fluentWait.test.GoogleApiTest@6279cee3]" name="googleApiTest" duration-ms="2159" started-at="2020-09-23T18:41:38Z" finished-at="2020-09-23T18:41:40Z">
+        <test-method status="PASS" signature="googleApiTest()[pri:0, instance:com.fluentWait.test.GoogleApiTest@1b604f19]" name="googleApiTest" duration-ms="3003" started-at="2020-09-24T19:26:07Z" finished-at="2020-09-24T19:26:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleApiTest -->
       </class> <!-- com.fluentWait.test.GoogleApiTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- ApiTest -->
+  </suite> <!-- ApiTestingSuite -->
 </testng-results>

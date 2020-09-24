@@ -20,7 +20,6 @@ import java.util.concurrent.TimeUnit;
  * Created by Fluent Wait on 3/11/2017.
  */
 public class GoogleApiTest {
-
 	
     @Test(groups = {"demo", "google"})
     public void googleApiTest() {
